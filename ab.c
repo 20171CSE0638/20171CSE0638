@@ -1,1 +1,1 @@
-internet technoloDDy
+internet techno
