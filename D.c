@@ -1,2 +1,2 @@
 HELLO
-ABCD
+ABC
