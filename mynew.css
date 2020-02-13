@@ -1,0 +1,16 @@
+
+    body
+	  {
+            background-image:url("colorful-of-dahlia-pink-flower-in-beautiful-garden-royal");
+            background-repeat:no-repeat;
+	    background-attachment:fixed;
+	    background-attachment:scroll;
+           }
+	  h1{	
+            color:green;
+            margin-left:50px;
+             }
+	   p{
+             color:yellow;
+	     }	
+
