@@ -64,9 +64,13 @@
                    }
                p{
                   border-left:6px solid red;
-                  background-color:yellow;
+                 margin:15px 50px 70px 100px;
 
                   }
-                  border
+               div{
+                   width:300px;
+                   margin:auto;
+                   border:2px solid red;
+                    }
 
 
