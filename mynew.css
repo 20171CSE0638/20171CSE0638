@@ -61,16 +61,81 @@
                    border-bottom-style:dashed;
                    border-left-style:double;
                      border-color:green;
+                    padding:25px 50px 75px 100px;
                    }
                p{
                   border-left:6px solid red;
                  margin:15px 50px 70px 100px;
-
+             
                   }
                div{
                    width:300px;
                    margin:auto;
                    border:2px solid red;
                     }
+                 p.ab{
+                   padding:5px;
+                   border-style:dashed;
+                   border-color:green;
+                   border-width:2px;
+                   margin:2cm;
+                   } 
+                  li{
+                    display:inline;
+                    }
+                  span.a{
+                     display:inline;
+                     width:100px;
+                     height:100px;
+                     padding:5px;
+                     border:1px solid red;
+                     background-color:yellow;
+                     }  
+                  span.b
+                      {
 
-
+                     display:inline-block;
+                     width:100px;
+                     height:100px;
+                     padding:5px;
+                     border:1px solid  blue;
+                     background-color:yellow;
+                       }
+                    span.c
+                      {
+                     display:block;
+                     width:100px;
+                     height:100px;
+                     padding:5px;
+                     border:1px solid green;
+                     background-color:green;
+                   }
+                       a {
+                         color:black; 
+                         }
+                        a.w
+                        {
+                         
+                         color:green;
+                         text-decoration:none;
+				 
+                         }
+                         a.y{
+                          color:black;  
+                          border:solid green 2px;
+                           text-decoration:none;
+                           }
+                            a.z{
+                              border:solid orange 2px;
+                                background-color:orange;
+	                          text-decoration:none;
+                               }
+                             a.w:hover
+                              {
+                               color:blue;
+                              }
+                             a.z:visited
+                              {                              
+				 color:red;
+                                  
+                              }
