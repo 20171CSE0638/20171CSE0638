@@ -1,7 +1,7 @@
 
     body
 	  { 
- 
+          
             background-image:url("colorful-of-dahlia-pink-flower-in-beautiful-garden-royal");
             background-repeat:no-repeat;
 	    background-attachment:scroll;
@@ -139,3 +139,59 @@
 				 color:red;
                                   
                               }
+                         p.l::first-letter{
+                                color:green;
+                                font-size:xx-large;
+                                      }
+                          p.l::first-line{
+                                color:red;
+                                font-variant:small-caps;
+                                      }
+                          p.l::selection{
+                                   color:yellow;
+                                   background-color:green;
+                            
+                             }
+                      
+                            div.m
+                                {
+
+                             background-image:url("colorful-of-dahlia-pink-flower-in-beautiful-garden-royal");
+                              width:600px;
+                             padding:60px;
+                             border:white
+                              }  
+                           div.o{
+                               background-color:white;
+                               padding:30px;
+                               opacity:0.4;
+                                 border:white
+                                 }div.n{border:white}
+                          #grad{
+                                 background-image:linear-gradient(red,yellow);}
+                          #h{background-image:linear-gradient(to right,red,yellow);}
+                          #jk{background-image:linear-gradient(to bottom,red,green);}
+                          #pp{background-image:linear-gradient(-90deg,red,blue,yellow);}
+			  #k{background-image:radial-gradient(green,red,yellow);}
+                          #hi{background-image:linear-gradient(to right,rgba(255,0,0,0),rgba(255,0,0,1));}
+	                  #t{background-image:repeating-linear-gradient(red,yellow 10%,green 10%);}
+
+				 #ht{background-image:radial-gradient(circle,red,yellow);}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
