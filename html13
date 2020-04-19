@@ -11,8 +11,8 @@
 		  Name.focus();
 		  return false;
 		  }
-		  else	if(name.length<3){
-			alert(" name should be greater than three");
+		  else	if(name.length<3||name.length>10){
+			alert(" name should be between 3 and 10");
 			Name.focus();
 			return false;
 		   }
@@ -126,24 +126,23 @@
 
 		var pwd=document.getElementById("PWD").value; 
 		var regularExpression = /^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,16}$/;
-
-	  	 if(pwd=="")
-    {
+     if(pwd=="")
+        {
         alert("password field is empty")
         PWD.focus()
         return false;
 	}
-   if (!regularExpression.test(pwd))
-   {
+     if (!regularExpression.test(pwd))
+       {
        alert("Enter password with atleast one numb and one special char and min length of 8 character")
        PWD.focus();
        return false;
-	}
-   
+  	}
+     document.getElementById("right_password").innerHTML="Strong Password";
 
-	
-
-	var cpwd=document.getElementById("CPWD").value;
+    
+    var cpwd=document.getElementById("CPWD").value;
+    
     if (cpwd=="")
     {
         alert("please confirm your password");
@@ -156,6 +155,8 @@
         CPWD.focus();
         return false;
 	} 
+    
+    alert(" Password matching");
     alert ("Validation successfully done!")
     return true;
  }
@@ -212,9 +213,9 @@
  <td height="28"><input type="text" id="UID" size="25" /></td>
 </tr>
 <tr>
- <td height="28" align="right">Password: &nbsp;<div id="right_password"></div>
+ <td height="28" align="right">Password: &nbsp;</td>
+ <td height="28"><input type="password" id="PWD" size="25" ><div id="right_password"></div>
 </td>
- <td height="28"><input type="password" id="PWD" size="25" /></td>
 </tr>
 <tr>
  <td height="28" align="right">Conf.PWD: &nbsp;</td>
