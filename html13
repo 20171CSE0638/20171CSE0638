@@ -1,0 +1,234 @@
+<html>
+ <head>
+	<title>Validation form</title>
+    <script type="text/JavaScript">
+	function validateForm()
+	{
+		var name=document.getElementById("Name").value;
+		 if(name=="")
+		  {
+		  alert("name field is empty");
+		  Name.focus();
+		  return false;
+		  }
+		  else	if(name.length<3){
+			alert(" name should be greater than three");
+			Name.focus();
+			return false;
+		   }
+                else {
+			for(i=0;i<name.length;i++)
+		        {
+			if(!((name.charAt(i)>='a'&&name.charAt(i)<='z')||(name.charAt(i)>='A'&&name.charAt(i)<='Z')))
+			{
+				alert("name should be a character only");
+				Name.focus();
+				return false;
+				}
+				}
+		}
+
+		var age=document.getElementById("Age").value;
+		if(age=="")
+		{
+			alert("age cannot be empty");
+			Age.focus();
+			return false;
+
+		}else if(!(age>19 && age<=80))
+		{
+			alert("age should be only  between 20 and 80");
+			Age.focus();
+			return false;
+			}
+
+		var gender= document.getElementsByName("gender");
+		if ( (gender[0].checked == false ) && ( gender[1].checked == false ) && (gender[2].checked == false ) )
+    {
+        alert ( "Please choose your Gender male or female or others" ); 
+        return false;
+	}
+
+
+	var yob=document.getElementById("YOB").value;
+		if((2020-yob)!=age)
+		{
+			alert("Check Year of birth properly");
+			YOB.focus();
+			return false;
+		}
+
+
+		var address=document.getElementById("ad").value;
+		if(address=="")
+		{
+			alert("Please fill atleast first field of address");
+			ad.focus();
+			return false;
+		}
+
+
+		var phoneno=document.getElementById("No").value;
+		if(phoneno=="")
+		{
+			alert("phone no cannot be empty");
+			No.focus();
+			return false;
+			}
+		else if(phoneno.length !=10)
+		{
+			alert("Please enter 10 digits");
+			No.focus();
+			return false;
+		}else{
+			for(i=0;i<phoneno.length;i++)
+			{
+				if(!(phoneno.charAt(i)>='0'&& phoneno.charAt(i)<='9'))
+      {
+          alert("please enter numbers only");
+          return false;
+	  }}
+	  }
+	   var e = document.getElementById("state");
+	   var strUser = e.options[e.selectedIndex].value;
+		if(strUser==0) 
+      {
+       alert("select your state");
+       return false;
+	}
+
+
+
+
+	  var x=document.getElementById("e").value;
+	if(x=="")
+    {
+        alert("email field cannot be empty");
+        return false;
+   }
+   else
+   {
+        var atpos=x.indexOf("@");
+        var dotpos=x.lastIndexOf(".");
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+        {
+            alert("Not a valid e-mail address");
+            return false;
+    }
+		document.getElementById("UID").value=document.getElementById("e").value;
+		PWD.focus();
+	  }
+
+
+
+
+		
+
+		var pwd=document.getElementById("PWD").value; 
+		var regularExpression = /^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,16}$/;
+
+	  	 if(pwd=="")
+    {
+        alert("password field is empty")
+        PWD.focus()
+        return false;
+	}
+   if (!regularExpression.test(pwd))
+   {
+       alert("Enter password with atleast one numb and one special char and min length of 8 character")
+       PWD.focus();
+       return false;
+	}
+   
+
+	
+
+	var cpwd=document.getElementById("CPWD").value;
+    if (cpwd=="")
+    {
+        alert("please confirm your password");
+        CPWD.focus();
+        return false;
+	}
+    if(cpwd!=pwd)
+    {
+        alert("not matching , please enter the  right password")
+        CPWD.focus();
+        return false;
+	} 
+    alert ("Validation successfully done!")
+    return true;
+ }
+	
+	
+</script>
+</head>
+<body>
+<center>
+<table border="0" bgcolor="yellow">
+<form name="UserReg" action="User.html" method="post" onsubmit="return validateForm()">
+<tr>
+ <td height="28" align="right">Name: &nbsp;</td>
+ <td height="28"><input type="text" id="Name" size="25" /></td>
+</tr>
+<tr>
+ <td height="28" align="right">Age: &nbsp;</td>
+ <td height="28"><input type="text" id="Age" size="25" /></td>
+</tr>
+<tr>
+ <td height="28" align="right">Gender : &nbsp;</td>
+ <td height="28"><input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female <input type="radio" name="gender" value="other">Other</td>
+</tr>
+<tr>
+ <td height="28" align="right">Year of Birth: &nbsp;</td>
+ <td height="28"><input type="text" id="YOB" size="25" /></td>
+</tr>
+<tr>
+ <td height="28" align="right" valign="top">Address: &nbsp;</td>
+<td height="28"><input type="text" maxlength="15" id="ad"></br><input type="text" maxlength="15"></br><input type="text" maxlength="15"></br></td>
+<tr>
+ <td height="28" align="right">Mob_no: &nbsp;</td>
+ <td height="28"><input type="text" id="No" maxlength="10"></br></td>
+</tr>
+<tr>
+ <td height="28" align="right">State: &nbsp;</td>
+ <td height="28">
+  <select id="state" >
+<option value="0">select</option>
+<option value="1" selected>Karnataka</option>
+<option value="2">kerala</option>
+<option value="3">AndraPradesh</option>
+<option value="4">Tamilnadu</option>
+</select>
+</td>
+</tr>
+<tr>
+ <td height="28" align="right">Email_id: &nbsp;</td>
+ <td height="28"><input type="text" id="e" size="25" ></td>
+</tr>
+<tr>
+ <td height="28" align="right">UID: &nbsp;</td>
+ <td height="28"><input type="text" id="UID" size="25" /></td>
+</tr>
+<tr>
+ <td height="28" align="right">Password: &nbsp;<div id="right_password"></div>
+</td>
+ <td height="28"><input type="password" id="PWD" size="25" /></td>
+</tr>
+<tr>
+ <td height="28" align="right">Conf.PWD: &nbsp;</td>
+ <td height="28"><input type="password" id="CPWD" size="25" /></td>
+</tr>
+<tr>
+ <td height="35"></td>
+ <td height="35"><input type="submit" value="Submit" name="UserReg" />
+ <td height="35"><input type="reset" value="Reset" name="reset" /></td>
+</tr>
+</form>
+</table>
+</body>
+</center>
+</html>
+
+`
